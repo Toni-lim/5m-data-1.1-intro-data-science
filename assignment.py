@@ -72,14 +72,10 @@ def count_repeats(string):
             dct[c] += 1
         else:
             dct[c] = 1
-    for k,v in dct.items():
-        
-    return dct
+    return sum([v for k,v in dct.items() if v > 1])
 
 
-# if __name__ == "__main__":
-#     import doctest
+if __name__ == "__main__":
+    import doctest
 
-#     doctest.testmod(verbose=True)
-
-count_repeats("hello")
+    doctest.testmod(verbose=True)
